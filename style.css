@@ -1,0 +1,227 @@
+body {
+    font-family: 'Vazir', sans-serif; /* استفاده از فونت Lalezar */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* سایه برای خواناتر شدن */
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    direction: rtl;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: #7e2ad9;
+    color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; 
+    padding: 20px;
+    position: relative;
+}
+
+header h1 {
+    color: #30db3e;
+    margin: 0;
+    font-size: 36px;
+    
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer; 
+    
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.content h2 {
+    color: #30db3e;
+    font-size: 28px;
+}
+
+.content p {
+    font-size: 18px;
+    color: #333;
+}
+
+footer {
+    background-color: #7e2ad9;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px; 
+    padding: 20px;
+    position: relative;
+}
+
+
+footer a {
+
+    color: #30db3e;
+}
+.navbar {
+    display: none;
+    background-color: #30db3e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 10px;
+    list-style-type: none;
+    border-radius: 5px;
+}
+
+.navbar ul {
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 10px 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* استایل بخش "درباره" */
+#about-section {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column; /* نمایش عمودی */
+    align-items: center; /* قرار گرفتن لینک‌ها در مرکز */
+    gap: 10px; /* فاصله بین لینک‌ها */
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 256px; /* عرض مستطیل */
+    padding: 10px 0; /* فاصله داخلی */
+    text-align: center; /* متن در مرکز */
+    background-color: #7e2ad9; /* رنگ پس‌زمینه */
+    color: #fff; /* رنگ متن */
+    border-radius: 15px; /* گوشه‌های گرد */
+    text-decoration: none; /* حذف خط زیر متن */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* افکت تغییر رنگ */
+}
+
+.social-links a:hover {
+    background-color: #30db3e; /* رنگ در حالت هاور */
+}
+
+.image-below-text {
+    width: 100%; /* تنظیم عرض تصویر به 100% از عرض صفحه */
+    max-width: 600px; /* حداکثر عرض تصویر */
+    margin-top: 20px; /* فاصله بالای تصویر */
+    display: block; /* اطمینان از نمایش به صورت بلاک */
+    margin-left: auto;
+    margin-right: auto; /* برای مرکزچین کردن تصویر */
+    border-radius: 15px; /* گوشه‌های گرد */
+    overflow: hidden; /* برای اطمینان از اینکه گوشه‌ها به درستی گرد شوند */
+    opacity: 0; /* ابتدا تصویر غیر قابل مشاهده است */
+    animation: fadeIn 1.5s forwards; /* استفاده از انیمیشن فیداین */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* شروع انیمیشن از غیر قابل مشاهده */
+        transform: scale(0.8); /* شروع از اندازه کوچکتر */
+    }
+    100% {
+        opacity: 1; /* پایان انیمیشن با نمایش کامل تصویر */
+        transform: scale(1); /* بازگشت به اندازه اصلی */
+    }
+}
+
+/* دکمه دایره‌ای */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;  /* فاصله از پایین صفحه */
+    left: 20px;    /* فاصله از سمت چپ صفحه */
+    width: 50px;   /* عرض دکمه */
+    height: 50px;  /* ارتفاع دکمه */
+    border-radius: 50%;  /* گرد کردن گوشه‌های دکمه */
+    background-color: #4c1d7d;  /* رنگ پس‌زمینه دکمه */
+    color: white;  /* رنگ متن */
+    font-size: 24px;  /* اندازه فونت */
+    border: none;   /* حذف مرز */
+    cursor: pointer;  /* تغییر نشانگر موس به حالت دست */
+    display: none;  /* به طور پیش‌فرض دکمه مخفی باشد */
+    align-items: center;  /* قرار دادن محتوای دکمه در مرکز */
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* سایه نرم برای دکمه */
+    transition: background-color 0.3s ease;  /* افکت تغییر رنگ */
+    z-index: 9999; /* اطمینان از اینکه دکمه روی سایر عناصر قرار گیرد */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #30db3e;  /* رنگ دکمه در حالت هاور */
+}
+
+/* اطمینان از اینکه فوتر روی دکمه دایره‌ای نرود */
+footer {
+    position: relative;
+    z-index: 1; /* دکمه دایره‌ای بالاتر از فوتر باشد */
+}
+
+
+
+body.dark-mode {
+    background-color: #000000;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #1a092d;
+}
+
+body.dark-mode footer {
+    background-color: #1a092d;
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #ffcd38;
+}
+
+body.dark-mode p {
+    color: #ffffff; /* رنگ دلخواه در حالت دارک مود */
+}
+
+body.dark-mode .social-links a {
+    background-color: #1a092d; /* رنگ پس‌زمینه در حالت دارک مود */
+    color: #30db3e; /* رنگ متن در حالت دارک مود */
+}
+
+/* تغییر رنگ در حالت هاور (دارک مود) */
+body.dark-mode .social-links a:hover {
+    background-color: #666; /* رنگ هاور در حالت دارک مود */
+}
