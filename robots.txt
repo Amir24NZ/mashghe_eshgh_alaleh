@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://amir24nz.github.io/mashghe_eshgh_alaleh/sitemap.xml
