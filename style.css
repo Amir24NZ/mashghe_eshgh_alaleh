@@ -263,8 +263,6 @@ body.dark-mode .bs {
     transition: transform 0.1s linear; /* برای انیمیشن نرم */
     touch-action: none; /* غیرفعال کردن اسکرول هنگام لمس */
     
-   
-    
   }
 
   .cover {
@@ -360,8 +358,4 @@ body.dark-mode .bs {
     text-decoration: none; /* حذف خط زیر متن */
     font-weight: bold;
     transition: background-color 0.3s ease; /* افکت تغییر رنگ */
-}
-
-.social-links a:hover {
-    background-color: #30db3e; /* رنگ در حالت هاور */
 }
