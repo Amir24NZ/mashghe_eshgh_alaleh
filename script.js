@@ -67,3 +67,65 @@ window.onscroll = function() {
         scrollBtn.style.display = "none";   // مخفی کردن دکمه
     }
 };
+
+const book = document.querySelector('.book');
+
+let rotationX = 0; // زاویه اولیه حول محور X
+let rotationY = 0; // زاویه اولیه حول محور Y
+let isMouseDown = false; // وضعیت نگه داشتن کلید ماوس
+let startX, startY; // موقعیت اولیه
+
+// شروع چرخش با نگه‌داشتن کلید ماوس
+document.addEventListener('mousedown', (e) => {
+  isMouseDown = true;
+  startX = e.clientX;
+  startY = e.clientY;
+});
+
+// چرخش هنگام حرکت ماوس و نگه‌داشتن کلید
+document.addEventListener('mousemove', (e) => {
+  if (isMouseDown) {
+    const deltaX = e.clientX - startX;
+    const deltaY = e.clientY - startY;
+
+    rotationY += deltaX * 0.5; // تغییر زاویه حول محور Y
+    rotationX -= deltaY * 0.5; // تغییر زاویه حول محور X
+
+    book.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+    startX = e.clientX;
+    startY = e.clientY;
+  }
+});
+
+// متوقف کردن چرخش وقتی کلید ماوس رها می‌شود
+document.addEventListener('mouseup', () => {
+  isMouseDown = false;
+});
+
+// اضافه کردن قابلیت لمسی (برای موبایل)
+document.addEventListener('touchstart', (e) => {
+  isMouseDown = true;
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+document.addEventListener('touchmove', (e) => {
+  if (isMouseDown) {
+    const deltaX = e.touches[0].clientX - startX;
+    const deltaY = e.touches[0].clientY - startY;
+
+    rotationY += deltaX * 0.5; // تغییر زاویه حول محور Y
+    rotationX -= deltaY * 0.5; // تغییر زاویه حول محور X
+
+    book.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
+
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }
+});
+
+document.addEventListener('touchend', () => {
+  isMouseDown = false;
+});
+

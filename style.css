@@ -225,3 +225,143 @@ body.dark-mode .social-links a {
 body.dark-mode .social-links a:hover {
     background-color: #666; /* رنگ هاور در حالت دارک مود */
 }
+
+body.dark-mode .bs {
+    background: #1a092d;
+}
+
+.bs{
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    background: #7e2ad9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* نمایش عمودی */
+    align-items: center;
+}
+
+.bs h1 {
+    color: #30db3e;
+    margin: 0;
+    font-size: 25px;
+
+}
+
+.bs p{
+
+    color: white;
+}
+
+.book {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d; /* فعال‌سازی سه‌بعدی */
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.1s linear; /* برای انیمیشن نرم */
+    touch-action: none; /* غیرفعال کردن اسکرول هنگام لمس */
+    
+   
+    
+  }
+
+  .cover {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    
+  }
+
+.front {
+    background-image: url('https://raw.githubusercontent.com/Amir24NZ/mashghe_eshgh_alaleh/main/images/book.jpg');
+    transform: rotateY(0deg) translateZ(10px);
+}
+
+.back {
+    background-image: url('https://raw.githubusercontent.com/Amir24NZ/mashghe_eshgh_alaleh/main/images/book2.jpg');
+    transform: rotateY(180deg) translateZ(10px);
+}
+
+.spine1 {
+    position: absolute;
+    width: 20px;
+    height: 300px;
+    background: #0438a6;
+    transform: rotateY(90deg) translateX(0px) translateZ(10px);
+  }
+
+  .spine2 {
+    position: absolute;
+    width: 20px;
+    height: 300px;
+    background: #d4d4d4;
+    transform: rotateY(90deg) translateX(0px) translateZ(-190px);
+  }
+
+  .spine3 {
+    position: absolute;
+    width: 200px; /* طول ستون فقرات افقی */
+    height: 20px; /* ضخامت ستون فقرات افقی */
+    background: #d4d4d4; /* رنگ ستون */
+    transform: rotateX(90deg) translateY(0px) translateZ(10px); /* چرخش و موقعیت */
+  }
+
+  .spine4 {
+    position: absolute;
+    width: 200px; /* طول ستون فقرات افقی */
+    height: 20px; /* ضخامت ستون فقرات افقی */
+    background: #d4d4d4; /* رنگ ستون */
+    transform: rotateX(90deg) translateY(0px) translateZ(-290px); /* چرخش و موقعیت */
+  }
+
+.book:hover {
+    transform: rotateY(360deg);
+}
+
+.price-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: red; /* خط قرمز روی قیمت قدیمی */
+    margin-bottom: 5px;
+  }
+  
+  .new-price {
+    font-weight: bold;
+    color: green; /* رنگ سبز برای قیمت جدید */
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column; /* نمایش عمودی */
+    align-items: center; /* قرار گرفتن لینک‌ها در مرکز */
+    gap: 10px; /* فاصله بین لینک‌ها */
+    margin-top: 20px;
+}
+
+.book-links a {
+    display: inline-block;
+    width: 256px; /* عرض مستطیل */
+    padding: 10px 0; /* فاصله داخلی */
+    text-align: center; /* متن در مرکز */
+    background-color: #30db3e; /* رنگ پس‌زمینه */
+    color: #fff; /* رنگ متن */
+    border-radius: 15px; /* گوشه‌های گرد */
+    text-decoration: none; /* حذف خط زیر متن */
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* افکت تغییر رنگ */
+}
+
+.social-links a:hover {
+    background-color: #30db3e; /* رنگ در حالت هاور */
+}
